@@ -1,4 +1,5 @@
-# Male Factor Infertility, Abnormal Spermatozoa and Cancer Risk: Reproducible Code for Meta-Analysis, Two-Sample Mendelian Randomization and Summary-level Double Machine Learning
+# Genetic Association Between Male Factor Infertility and Cancers: A Meta-Analysis, Bidirectional Two-Sample Mendelian Randomization
+and Double Machine Learning
 
 <!-- Zenodo DOI badge — replace the placeholder URL after you create the Zenodo release.
      Before the DOI exists, leave this placeholder commented out or use the "pending" badge. -->
