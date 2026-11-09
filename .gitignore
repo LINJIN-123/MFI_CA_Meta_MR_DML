@@ -1,0 +1,122 @@
+# =====================================================================
+# .gitignore — 防止大文件、密钥、缓存和本地环境进入版本库
+# =====================================================================
+
+# ---------- 原始 GWAS / 大数据（禁止上传，体积大且多有许可限制）----------
+*.gz
+*.bgz
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+# 大型汇总数据（按需保留小体积结果表，屏蔽原始 sumstats）
+finngen_*.gz
+*sumstats*
+*sum_stat*
+# 超过 50 MB 的任何文件（GitHub 硬上限 100 MB，50 MB 已告警）
+*.bigfile
+
+# ---------- 密钥 / 个人令牌（绝对不能提交）----------
+# 个人 OpenGWAS token、API key、密码
+.env
+*.token
+*token*.txt
+*secret*
+*credential*
+# 提醒：脚本中不要硬编码 JWT / API token，改用环境变量
+
+# ---------- R 缓存与临时文件 ----------
+.RData
+.Rhistory
+.Rapp.history
+.Rproj.user/
+*.Rproj
+Rplots.pdf
+Rplots.ps
+# 检查点 / 编译产物
+*.Rcheck/
+*.Rout
+*.Rout.fail
+*.rdb
+*.rdx
+*.Rtmp
+# knitr / bookdown 缓存
+cache/
+*.utf8.md
+# 保留 renv 锁文件，但屏蔽本地库缓存
+renv/library/
+renv/staging/
+renv/local/
+renv/cellar/
+renv/python/
+renv/.gitignore
+renv/activate.R
+# Quarto / Rmarkdown 临时
+.quarto/
+*.log
+
+# ---------- Python 缓存与本地环境 ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+# 虚拟环境 / conda 本地环境目录
+.venv/
+venv/
+env/
+ENV/
+.conda/
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+# 测试 / 覆盖率
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+# 模型大文件
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.sav
+
+# ---------- 系统 / 编辑器临时文件 ----------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+~$*
+*.tmp
+*.temp
+*.swp
+*.swo
+.idea/
+.vscode/
+*.bak
+
+# ---------- 输出目录里只保留小体积结果表，屏蔽大文件 ----------
+output_results/**/*.png
+output_results/**/*.tiff
+output_results/**/*.tif
+output_results/**/*.pdf
