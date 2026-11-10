@@ -120,3 +120,7 @@ output_results/**/*.png
 output_results/**/*.tiff
 output_results/**/*.tif
 output_results/**/*.pdf
+
+# ---------- MR-PRESSO 模块：仅保留 R 源脚本，忽略结果表与输出目录 ----------
+MR/MR-PRESSO/**/*.csv
+MR/MR-PRESSO/output/

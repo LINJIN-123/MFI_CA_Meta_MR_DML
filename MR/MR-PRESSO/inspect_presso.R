@@ -1,0 +1,8 @@
+library(MRPRESSO)
+cat("=== args ===\n")
+print(args(mr_presso))
+cat("\n=== function body (first 60 lines) ===\n")
+b <- deparse(body(mr_presso))
+cat(head(b, 60), sep = "\n")
+cat("\n=== package location ===\n")
+print(find.package("MRPRESSO"))
